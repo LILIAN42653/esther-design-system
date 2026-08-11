@@ -10,17 +10,19 @@
   <style>
     /* === CSS变量 === */
     :root { --_esther-ds: "esthersjw-v1";
-      --blue: #2B7FD8;
-      --blue-deep: #1E5BA8;
-      --yellow: #F4D758;
-      --yellow-soft: #FFF3CD;
-      --red: #E84A5F;
-      --cream: #fefcf6;
-      --cream-dark: #faf6eb;
-      --ink: #1A1A2E;
-      --ink-light: #4A4A5A;
-      --ink-faint: #8A8A9A;
-      --dark-panel: #151821;
+      --burgundy: #43302E;
+      --burgundy-deep: #2F211F;
+      --buttermilk: #FFF1B5;
+      --buttermilk-soft: #FFF1B5;
+      --mist-blue: #C1DBE8;
+      --mist-blue-ink: #506F7D;
+      --auxiliary-cream: #FFF8DE;
+      --cream: #FFFEFA;
+      --cream-dark: #FFF1B5;
+      --ink: #2D2423;
+      --ink-light: #6B5955;
+      --ink-faint: #9A837D;
+      --dark-panel: #352725;
     }
 
     /* === Reset === */
@@ -31,11 +33,11 @@
       font-size: 16px;
       line-height: 1.7;
       color: var(--ink);
-      background: var(--cream);
+      background: var(--buttermilk);
     }
 
     ::selection {
-      background: var(--yellow);
+      background: var(--buttermilk);
       color: var(--ink);
     }
 
@@ -56,6 +58,9 @@
       padding: 6rem 2rem 4rem;
       max-width: 1300px;
       margin: 0 auto;
+      background: var(--buttermilk);
+      box-shadow: 0 0 0 100vmax var(--buttermilk);
+      clip-path: inset(0 -100vmax);
     }
 
     .hero h1 {
@@ -63,6 +68,21 @@
       font-weight: 900;
       font-size: clamp(2.8rem, 7vw, 5.5rem);
       line-height: 1.15;
+      color: var(--burgundy);
+    }
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero-avatar {
+      width: min(280px, 70vw);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #FFFEFA;
+      border: 4px solid var(--mist-blue);
+      box-shadow: 0 12px 36px rgba(67,48,46,.14);
     }
 
     .hero p {
@@ -89,7 +109,7 @@
     }
 
     .section--alt {
-      background: var(--cream-dark);
+      background: var(--mist-blue);
     }
 
     .section-header {
@@ -100,7 +120,7 @@
       font-family: 'Fraunces', serif;
       font-style: italic;
       font-size: clamp(1.4rem, 3vw, 2rem);
-      color: var(--blue);
+      color: var(--burgundy);
       opacity: 0.3;
       display: block;
       margin-bottom: 0.25rem;
@@ -110,14 +130,15 @@
       font-family: 'Noto Serif SC', serif;
       font-weight: 900;
       font-size: clamp(1.4rem, 3vw, 2.2rem);
+      color: var(--burgundy);
     }
 
     /* === 卡片 === */
     .feature-card {
-      background: var(--cream-dark);
+      background: var(--mist-blue);
       border-radius: 16px;
       padding: clamp(24px, 3vw, 36px);
-      border-bottom: 4px solid var(--yellow);
+      border-bottom: 4px solid var(--buttermilk);
       transition: transform 0.3s ease;
     }
     .feature-card:hover { transform: translateY(-4px); }
@@ -165,7 +186,7 @@
       <p><!-- 副标题/描述 --></p>
     </div>
     <div class="hero-visual">
-      <!-- 视觉元素：图片/装饰/IP形象 -->
+      <img class="hero-avatar" src="avatar.png" alt="栗栗安头像">
     </div>
   </section>
 
@@ -199,7 +220,7 @@
 
   <!-- ====== SECTION 3 ====== -->
   <!-- 可选：深色面板打破节奏 -->
-  <section class="section" style="background: var(--dark-panel); color: #e2e8f0;">
+  <section class="section" style="background: var(--dark-panel); color: #F3E8D8;">
     <div class="container">
       <div class="reveal">
         <!-- 重点内容/引用 -->

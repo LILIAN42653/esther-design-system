@@ -8,21 +8,23 @@
 
 | 用途 | 变量名 | 色值 | 说明 |
 |------|--------|------|------|
-| 主黄 | `--yellow` | `#F4D758` | 强调、装饰圆圈、连接线、badges |
-| 柔黄 | `--yellow-soft` | `#FFF3CD` | 背景块、气泡底色 |
-| 主蓝 | `--blue` | `#2B7FD8` | 英文标题、超链、重点标记 |
-| 深蓝 | `--blue-deep` | `#1E5BA8` | 大装饰字、section数字编号 |
-| 红色 | `--red` | `#E84A5F` | 点缀、高亮下划线、标签 |
-| 奶白底 | `--cream` | `#fefcf6` | 页面主背景 |
-| 深奶底 | `--cream-dark` | `#faf6eb` | section间交替背景 |
-| 墨色 | `--ink` | `#1A1A2E` | 正文主色（非纯黑） |
-| 浅墨 | `--ink-light` | `#4A4A5A` | 次要正文 |
-| 淡墨 | `--ink-faint` | `#8A8A9A` | 辅助文字、标签 |
+| 酪乳黄 | `--buttermilk` | `#FFF1B5` | 大面积暖底、高亮、装饰圆圈、badges |
+| 酪乳黄复用 | `--buttermilk-soft` | `#FFF1B5` | 小面积标签、气泡底色，不新增色值 |
+| 旧勃艮第棕 | `--burgundy` | `#43302E` | 英文标题、超链、重点标记 |
+| 深勃艮第棕 | `--burgundy-deep` | `#2F211F` | 大装饰字、section数字编号 |
+| 柔雾蓝 | `--mist-blue` | `#C1DBE8` | 辅助底色、连接线、轻盈点缀 |
+| 柔雾蓝文字 | `--mist-blue-ink` | `#506F7D` | 需要满足可读性的蓝色文字 |
+| 第四辅助色 | `--auxiliary-cream` | `#FFF8DE` | 用于小型状态节点、过渡描边和局部承托，不取代三主色主体背景 |
+| 暖白阅读面 | `--cream` | `#FFFEFA` | 仅用于卡片内部、高密度正文 |
+| 墨色 | `--ink` | `#2D2423` | 正文主色（非纯黑） |
+| 浅墨 | `--ink-light` | `#6B5955` | 次要正文 |
+| 淡墨 | `--ink-faint` | `#9A837D` | 辅助文字、标签 |
 
 ### 色彩原则
-- 绝不用纯黑 `#000` 或纯白 `#fff`——总是带暖调
-- 主色永远是暖黄+蓝，红色只做点缀
-- 背景用径向渐变制造层次感，不要纯平色
+- 绝不用纯黑 `#000000` 或纯白 `#FFFFFF`；暖黑使用 `#2D2423`，暖白使用 `#FFFEFA`
+- 页面以酪乳黄承担大面积暖底，以旧勃艮第棕建立核心识别，以柔雾蓝形成辅助内容板块
+- 暖白不得作为页面或 section 主背景，单页可见面积不得超过 20%
+- 背景可用低对比暖光或纸张纹理制造层次，不使用科技渐变
 
 ---
 
@@ -70,7 +72,7 @@
 7. **产品出血型Hero**: 左侧40%紧凑文字（大标题+描述+缩略图），右侧60%大图溢出右边界。图片用 `margin-right: -5vw; border-radius: 24px 0 0 24px`，grid: `grid-template-columns: 0.4fr 0.6fr`
 8. **条纹Editorial**: 条纹分割带（repeating-linear-gradient）做section分隔。内部左图右文，图片可加低饱和度滤镜。标题用Fraunces大号italic，正文小号无衬线
 9. **横向滚动时间线**: flex横排 + scroll-snap + 固定宽度卡片，适合经历展示、项目历程
-10. **全宽品牌色面板**: 背景使用蓝/黄/橙纯色，文字反白。一页最多1~2个，用于打破奶白底的节奏。禁忌：不要在品牌色面板上放蓝色文字
+10. **全宽品牌色面板**: 背景使用旧勃艮第棕、酪乳黄或柔雾蓝纯色。棕底使用暖白字，酪乳黄与柔雾蓝底使用旧勃艮第棕字
 11. **对称双栏（Pain展示）**: `grid-template-columns: 1fr 1fr`，min-height: 100vh。左侧大字标题，右侧列表/解释。适合问题/痛点、before/after对比
 
 ### 间距系统
@@ -84,13 +86,13 @@
 ## 🎭 装饰元素
 
 ### 可用的装饰手法
-- **虚线圆圈**: `border: 2.5px dashed var(--yellow); border-radius: 50%`，半透明，大尺寸做背景
+- **虚线圆圈**: `border: 2.5px dashed var(--buttermilk); border-radius: 50%`，半透明，大尺寸做背景
 - **渐变光晕**: `radial-gradient(ellipse, rgba(255,217,61,0.18), transparent)` 做柔和背景
-- **分割线**: `linear-gradient(90deg, transparent, var(--yellow), transparent)` 1px渐隐线
+- **分割线**: `linear-gradient(90deg, transparent, var(--buttermilk), transparent)` 1px渐隐线
 - **高亮标记**: `background: linear-gradient(180deg, transparent 50%, rgba(255,217,61,0.35) 50%)` 文字底部高亮
 - **大透明数字**: 超大字号 + `opacity: 0.12~0.2` 做section装饰
 - **SVG简笔画**: 用描边风格的简化示意图，不要写实截图
-- **底部色条**: `border-bottom: 4px solid var(--yellow/blue/red)` 给卡片加标识（禁止使用 border-left 竖线引用块）
+- **底部色条**: `border-bottom: 4px solid var(--buttermilk/blue/red)` 给卡片加标识（禁止使用 border-left 竖线引用块）
 
 ### 条纹肌理分割（替代渐隐线做section divider）
 ```css
@@ -137,7 +139,7 @@
 .decorative-frame {
   position: relative;
   padding: 16px;
-  border: 2.5px dashed var(--yellow);
+  border: 2.5px dashed var(--buttermilk);
   border-radius: 12px;
 }
 .decorative-frame::before {
@@ -186,7 +188,7 @@
 - `unobserve` after triggering（只触发一次）
 - 用 `.reveal-d1` ~ `.reveal-d5` 做 stagger（0.1s递增）
 - 尊重 `prefers-reduced-motion`
-- 选中文本高亮：`::selection { background: #F4D758; color: #1a1a1a; }`
+- 选中文本高亮：`::selection { background: #FFF1B5; color: #1a1a1a; }`
 
 ### 动效原则
 - **只用 opacity + transform**，不要animate layout属性
@@ -197,7 +199,7 @@
 ### 明确禁止
 - ❌ 不要用 `transform: rotate()` 让元素歪着放——这是廉价的假活泼
 - ❌ 不要故意错位/偏移来制造"手工感"
-- ❌ 不要蓝底面板上放红色文字
+- ❌ 不要棕底面板上放旧勃艮第棕文字
 
 ---
 
@@ -226,11 +228,11 @@
 
 ## 🧩 可发散方向
 
-- **配色微调**: 内容跟某品牌相关时可替换主蓝为品牌色，但暖黄+奶白底不变
+- **配色微调**: 内容跟某品牌相关时仍保留栗栗安固定三色，不引入外部品牌色替代主背景
 - **布局组合**: 十一种布局模式自由组合
 - **装饰密度**: 轻松内容多装饰，严肃内容减少装饰只保留字体层次
 - **IP出现方式**: 不同姿势（叉腰、放大镜、坐椅子等）
-- **深色section**: 可用一个section用深色底（如 `--blue-deep`），制造节奏对比
+- **深色section**: 可用一个section用深色底（如 `--burgundy-deep`），制造节奏对比
 - **交互**: 如果内容适合，可加hover状态、tab切换、accordion——但不要为交互而交互
 
 ---

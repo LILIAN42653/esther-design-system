@@ -1,10 +1,16 @@
-# Personal Design Skill
+# 栗栗安 Personal Design Skill
 
-一套给 AI 看的个人品牌设计系统。
+一套给 AI 看的栗栗安个人品牌设计系统，服务于 AI 自媒体与女性成长内容。
 
-**ESTHER不二** · [小红书](https://www.xiaohongshu.com/user/profile/55c6c7695894460904f87b47?m_source=pinpai) · [Twitter / X](https://x.com/SjwEsther)
+**栗栗安** · 温暖 × 知性 × 高级 · 帮助普通文科背景女性用 AI 提效并实现自我成长
 
-![Esther Design System overview](assets/design-system-overview-final.png)
+> 本版本基于 [ESTHER不二的 esther-design-system](https://github.com/esthersjw/esther-design-system) 修改，遵循 CC BY-NC-SA 4.0。
+
+![栗栗安品牌视觉预览](assets/lilian-brand-preview.png)
+
+## 上游授权与身份说明
+
+以下身份说明来自原作者，个性化使用时仍需遵守：
 
 > **开源的是方法论，不是我的身份。**
 >
@@ -14,27 +20,26 @@
 
 把审美写成操作手册，AI 每次帮你做页面时必须翻这本手册，不能自由发挥。**限制 AI 的自由度 = 保证输出质量。**
 
-> ⚠️ **使用前请先完成 `brand-dna.md` 的配置：** 默认品牌色可直接使用，如需替换成你自己的请同步修改模板变量；并放入你自己的头像。
+> ✅ 栗栗安的品牌色、气质、内容方向、目标受众和正式头像已经写入并同步到全部模板。
 
 ---
 
 ## Demo
 
-用这套系统生成的真实页面：
+🔗 [打开完整视觉验收台](visual-overview.html)
 
-### 📖 教程型 - 分享会页面
+### 栗栗安品牌示例
 
-信息清晰、步骤明确、有节奏的单页科普/教程。
+- [个人品牌示例页](demo-lilian-brand.html)
+- [首屏预览图](assets/lilian-brand-preview.png)
 
-🔗 [在线预览](https://esthersjw.github.io/cola-ob-sharing/cola-ob-sharing.html)
-
----
+以下场景演示已同步栗栗安品牌配色、正式头像与个人署名：
 
 ### 📖 教程型 - Design Skill 拆解
 
 把审美写成操作手册——从纠正AI到做出自己的Design Skill的完整过程。
 
-🔗 [在线预览](https://esthersjw.github.io/esther-design-system/demo-readme-tutorial.html)
+🔗 [查看栗栗安版本](demo-readme-tutorial.html)
 
 ---
 
@@ -42,7 +47,7 @@
 
 视觉冲击、深浅面板交替、强节奏感的活动邀请页。
 
-🔗 [在线预览](https://esthersjw.github.io/esther-design-system/demo-landing.html)
+🔗 [查看栗栗安版本](demo-landing.html)
 
 ---
 
@@ -50,7 +55,7 @@
 
 功能优先、交互感、信息密度高的应用型页面。
 
-🔗 [在线预览](https://esthersjw.github.io/esther-design-system/demo-app.html)
+🔗 [查看栗栗安版本](demo-app.html)
 
 ---
 
@@ -58,7 +63,7 @@
 
 3:4 比例、字大、手机可读、一键导出 PNG 的图文卡片。
 
-🔗 [在线预览](https://esthersjw.github.io/esther-design-system/demo-cards.html)
+🔗 [查看栗栗安版本](demo-cards.html)
 
 ---
 
@@ -66,7 +71,7 @@
 
 杂志编号风：全内联样式 + section 标签，复制粘贴进微信公众号编辑器即可。
 
-🔗 [在线预览](https://esthersjw.github.io/esther-design-system/assets/demo-wechat.html)
+🔗 [查看栗栗安版本](assets/demo-wechat.html)
 
 ---
 
@@ -74,7 +79,7 @@
 
 16种经过验证的布局模式一览。
 
-🔗 [在线预览](https://esthersjw.github.io/esther-design-system/demo-layouts.html)
+🔗 [查看栗栗安版本](demo-layouts.html)
 
 ---
 
@@ -82,7 +87,7 @@
 
 51个经过验证的可复用组件。
 
-🔗 [组件库预览](https://esthersjw.github.io/esther-design-system/components-preview.html)
+🔗 [查看栗栗安版本](components-preview.html)
 
 ---
 
@@ -115,8 +120,8 @@ esther-design-system/
 │   ├── template-app.html           App型模板
 │   ├── template-cards.html         小红书卡片模板
 │   ├── html2canvas.min.js          卡片导出依赖
-│   ├── avatar-placeholder.svg      占位头像(可替换为你自己的 avatar.jpg)
-│   └── avatar.jpg                  ← 你的头像(需自行放入,仓库未附带)
+│   ├── avatar-placeholder.svg      头像缺失时的品牌占位图
+│   └── avatar.png                  栗栗安正式头像
 └── references/                 ← 规则和零件(知识库)
     ├── layouts.md                  16种布局模式(附完整代码)
     ├── components.md               组件库(51组件,完整HTML+CSS)
@@ -148,13 +153,16 @@ AI 每次做设计必须按这个顺序走：
 
 ## 品牌基因速览
 
-### 三色（默认配色，可在brand-dna.md中替换为你自己的）
+### 栗栗安三主色 + 第四辅助色
 
 | 颜色 | 色值 | 比例 |
 |------|------|------|
-| 主色 | `#2B7FD8` | 60% |
-| 强调色 | `#F4D758` | 30% |
-| 点缀色 | `#E84A5F` | 10% |
+| 酪乳黄 | `#FFF1B5` | 50% |
+| 旧勃艮第棕 | `#43302E` | 25% |
+| 柔雾蓝 | `#C1DBE8` | 15% |
+| 奶油米黄 | `#FFF8DE` | 10% |
+
+长页面必须至少出现一个酪乳黄大板块、一个柔雾蓝内容板块、一个旧勃艮第棕重点板块和一个奶油米黄承托区。第四色正式计入比例，四色约为 50:25:15:10；不再使用其他暖米灰。暖白 `#FFFEFA` 仅用于卡片内部或高密度正文阅读面，单页可见面积不超过 20%，不能成为整页或整段背景。
 
 ### 字体
 
@@ -166,13 +174,13 @@ AI 每次做设计必须按这个顺序走：
 | 手写/注释 | Caveat |
 | 代码/终端 | Fira Code |
 
-### 气质关键词（请根据你的品牌调性修改）
+### 气质关键词
 
-可爱但有品质 · 手绘蜡笔感 · 有温度 · **不像 AI** · 一看就是你的
+温暖 · 知性 · 高级 · 柔和但有力量 · **不像 AI** · 一看就是栗栗安
 
 ### 禁忌
 
-蓝紫渐变 · glassmorphism · neon · bounce 动画 · Inter/Roboto · 所有 section 居中 · HTML 默认样式 · 看起来像 AI 生成的通用模板
+科技蓝 · 蓝紫渐变 · glassmorphism · neon · 黑客终端感 · bounce 动画 · Inter/Roboto · 所有 section 居中 · HTML 默认样式 · 看起来像 AI 生成的通用模板
 
 ---
 
@@ -180,7 +188,7 @@ AI 每次做设计必须按这个顺序走：
 
 **P0(必须全过)**
 
-品牌三色比例 · 无禁忌元素 · 无 HTML 默认样式 · 暖底背景 · 衬线+无衬线混搭 · 响应式 · 每 section 布局不同 · clamp() fluid sizing · 截图发社交媒体不会被说"又是 AI 做的"
+品牌四色比例 50:25:15:10 · 无禁忌元素 · 无 HTML 默认样式 · 暖底背景 · 衬线+无衬线混搭 · 响应式 · 每 section 布局不同 · clamp() fluid sizing · 截图发社交媒体不会被说"又是 AI 做的"
 
 **P1(应过)**
 
@@ -195,9 +203,9 @@ AI 每次做设计必须按这个顺序走：
 ## 怎么用
 
 1. Fork 或克隆本仓库
-2. 放入你的头像 `assets/avatar.jpg`
-3. （可选）打开 `brand-dna.md`，把默认品牌色替换成你自己的，并同步修改 `assets/template-*.html` 里 `:root` 的变量。注意：公众号模板（`template-wechat.html`）全部是内联样式，没有 CSS 变量，需要手动搜索替换色值。快捷方法：在所有模板文件中搜索 `#2B7FD8` 替换为你的主色，`#F4D758` 替换为你的强调色，`#E84A5F` 替换为你的点缀色
-4. 把 `assets/template-cards.html` 中的作者名替换成你自己的
+2. 栗栗安头像已放入 `assets/avatar.png`，更换时保持文件名不变
+3. 直接使用已完成配色同步的 `assets/template-*.html`
+4. 如未来更换配色，先改 `brand-dna.md`，再同步模板变量；公众号模板为内联样式，需要单独搜索替换
 5. 把仓库链接发给你的 AI Agent，跟它说：
 
 > 帮我读这个设计系统，以后做页面按这个规范来。

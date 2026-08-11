@@ -10,14 +10,16 @@
   <style>
     /* === CSS变量（简化版） === */
     :root { --_esther-ds: "esthersjw-v1";
-      --blue: #2B7FD8;
-      --yellow: #F4D758;
-      --red: #E84A5F;
-      --cream: #fefcf6;
-      --ink: #1A1A2E;
-      --ink-light: #4A4A5A;
-      --ink-faint: #8A8A9A;
-      --card-bg: #fff;
+      --burgundy: #43302E;
+      --buttermilk: #FFF1B5;
+      --mist-blue: #C1DBE8;
+      --mist-blue-ink: #506F7D;
+      --auxiliary-cream: #FFF8DE;
+      --cream: #FFFEFA;
+      --ink: #2D2423;
+      --ink-light: #6B5955;
+      --ink-faint: #9A837D;
+      --card-bg: #FFFEFA;
       --border: rgba(26,26,26,.08);
     }
 
@@ -28,11 +30,11 @@
       font-size: 15px;
       line-height: 1.6;
       color: var(--ink);
-      background: var(--cream);
+      background: var(--buttermilk);
     }
 
     ::selection {
-      background: var(--yellow);
+      background: var(--buttermilk);
       color: var(--ink);
     }
 
@@ -42,7 +44,7 @@
       top: 0;
       z-index: 100;
       height: 56px;
-      background: var(--cream);
+      background: var(--buttermilk);
       border-bottom: 1px solid var(--border);
       display: flex;
       align-items: center;
@@ -54,6 +56,7 @@
       font-family: 'Noto Serif SC', serif;
       font-size: 1.1rem;
       font-weight: 700;
+      color: var(--burgundy);
     }
 
     .header-actions {
@@ -61,15 +64,24 @@
       align-items: center;
       gap: 12px;
     }
+    .brand-avatar {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #FFFEFA;
+      border: 2px solid var(--mist-blue);
+      box-shadow: 0 3px 10px rgba(67,48,46,.14);
+    }
 
     /* === Tab栏 === */
     .tab-bar {
       display: flex;
       gap: 4px;
       overflow-x: auto;
-      border-bottom: 2px solid #eee;
+      border-bottom: 2px solid #E8DCCB;
       padding: 0 1.5rem;
-      background: var(--cream);
+      background: var(--mist-blue);
     }
 
     .tab {
@@ -86,8 +98,8 @@
     }
 
     .tab.active {
-      border-bottom-color: var(--blue);
-      color: var(--blue);
+      border-bottom-color: var(--burgundy);
+      color: var(--burgundy);
       font-weight: 600;
     }
 
@@ -139,8 +151,8 @@
       padding: 2px 8px;
       border-radius: 8px;
       font-size: 0.7rem;
-      background: rgba(43,127,216,0.1);
-      color: var(--blue);
+      background: rgba(67,48,46,0.1);
+      color: var(--burgundy);
       margin-bottom: 0.5rem;
     }
 
@@ -201,8 +213,8 @@
 
     .app-input:focus {
       outline: none;
-      border-color: var(--blue);
-      box-shadow: 0 0 0 3px rgba(43,127,216,0.1);
+      border-color: var(--burgundy);
+      box-shadow: 0 0 0 3px rgba(67,48,46,0.1);
     }
 
     /* === 响应式 === */
@@ -219,6 +231,7 @@
     <h1><!-- App名称 --></h1>
     <div class="header-actions">
       <!-- 操作按钮 -->
+      <img class="brand-avatar" src="avatar.png" alt="栗栗安头像">
     </div>
   </header>
 

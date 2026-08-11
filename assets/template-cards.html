@@ -11,20 +11,23 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root { --_esther-ds: "esthersjw-v1";
-  --yellow: #F4D758;
-  --yellow-soft: #FFF3CD;
-  --blue: #2B7FD8;
-  --blue-deep: #1E5BA8;
-  --red: #E84A5F;
-  --cream: #fefcf6;
-  --cream-dark: #faf6eb;
-  --ink: #1A1A2E;
-  --ink-light: #4A4A5A;
-  --ink-faint: #8A8A9A;
+  --buttermilk: #FFF1B5;
+  --buttermilk-soft: #FFF1B5;
+  --burgundy: #43302E;
+  --burgundy-deep: #2F211F;
+  --mist-blue: #C1DBE8;
+  --mist-blue-ink: #506F7D;
+  --auxiliary-cream: #FFF8DE;
+  --canvas-bg: var(--auxiliary-cream);
+  --cream: #FFFEFA;
+  --cream-dark: #FFF1B5;
+  --ink: #2D2423;
+  --ink-light: #6B5955;
+  --ink-faint: #9A837D;
 }
 
 body {
-  background: #e8e4de;
+  background: var(--canvas-bg);
   font-family: 'Noto Sans SC', sans-serif;
   color: var(--ink);
   padding: 40px 20px;
@@ -46,8 +49,8 @@ body {
 }
 
 .export-bar button {
-  background: var(--blue);
-  color: #fff;
+  background: var(--burgundy);
+  color: #FFFEFA;
   border: none;
   padding: 10px 28px;
   border-radius: 8px;
@@ -57,10 +60,10 @@ body {
   font-family: 'Noto Sans SC', sans-serif;
 }
 
-.export-bar button:hover { background: #1a6abf; }
+.export-bar button:hover { background: #2F211F; }
 
 .export-bar .hint {
-  color: #aaa;
+  color: #9A837D;
   font-size: 13px;
 }
 
@@ -85,9 +88,14 @@ body {
   box-shadow: 0 8px 40px rgba(0,0,0,0.12);
 }
 
+/* 第四辅助色承托页：约每 10 张使用 1 张，或以局部面板累计约 10% 可见面积 */
+.card--auxiliary {
+  background: var(--auxiliary-cream);
+}
+
 /* ========== P1 封面 ========== */
 .p-cover {
-  background: var(--cream);
+  background: var(--buttermilk);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -98,14 +106,14 @@ body {
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 8px;
-  background: linear-gradient(90deg, var(--blue) 60%, var(--yellow) 80%, var(--red) 100%);
+  background: linear-gradient(90deg, var(--burgundy) 60%, var(--buttermilk) 80%, var(--mist-blue) 100%);
 }
 
 .p-cover .tag {
   font-size: 28px;
   font-weight: 700;
-  color: #fff;
-  background: var(--blue);
+  color: var(--burgundy);
+  background: var(--mist-blue);
   display: inline-block;
   padding: 8px 24px;
   border-radius: 6px;
@@ -118,11 +126,11 @@ body {
   font-weight: 900;
   font-size: 88px;
   line-height: 1.2;
-  color: var(--ink);
+  color: var(--burgundy);
   margin-bottom: 24px;
 }
 
-.p-cover h1 .highlight { color: var(--blue); }
+.p-cover h1 .highlight { color: var(--burgundy); }
 
 .p-cover .subtitle {
   font-size: 42px;
@@ -144,7 +152,7 @@ body {
   height: 88px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--yellow);
+  border: 3px solid var(--mist-blue);
 }
 
 .p-cover .author-name {
@@ -161,7 +169,7 @@ body {
 
 /* ========== 深色面板页 ========== */
 .p-dark {
-  background: var(--ink);
+  background: var(--burgundy);
   display: flex;
   flex-direction: column;
   padding: 80px 80px;
@@ -171,7 +179,7 @@ body {
   font-family: 'Fraunces', serif;
   font-style: italic;
   font-size: 120px;
-  color: var(--yellow);
+  color: var(--buttermilk);
   opacity: 0.15;
   position: absolute;
   top: 40px;
@@ -189,7 +197,7 @@ body {
 
 .p-dark .sub {
   font-size: 32px;
-  color: var(--yellow);
+  color: var(--buttermilk);
   margin-bottom: 60px;
   font-weight: 500;
 }
@@ -217,13 +225,13 @@ body {
 
 .p-dark .item .text {
   font-size: 38px;
-  color: #e8e4de;
+  color: #FFFEFA;
   line-height: 1.5;
   font-weight: 500;
 }
 
 .p-dark .item .text strong {
-  color: #fff;
+  color: #FFFEFA;
   font-weight: 700;
 }
 
@@ -233,7 +241,7 @@ body {
   left: 80px;
   right: 80px;
   height: 4px;
-  background: linear-gradient(90deg, var(--blue) 50%, var(--yellow) 75%, var(--red) 100%);
+  background: linear-gradient(90deg, var(--burgundy) 50%, var(--buttermilk) 75%, var(--mist-blue) 100%);
   border-radius: 2px;
   opacity: 0.6;
 }
@@ -250,7 +258,7 @@ body {
   font-family: 'Fraunces', serif;
   font-style: italic;
   font-size: 120px;
-  color: var(--blue);
+  color: var(--burgundy);
   opacity: 0.12;
   position: absolute;
   top: 40px;
@@ -271,7 +279,7 @@ body {
   display: block;
   width: 80px;
   height: 6px;
-  background: var(--yellow);
+  background: var(--buttermilk);
   margin-top: 16px;
   border-radius: 3px;
 }
@@ -299,14 +307,14 @@ body {
   position: absolute;
   bottom: 0; left: 0; right: 0;
   height: 8px;
-  background: linear-gradient(90deg, var(--blue) 60%, var(--yellow) 80%, var(--red) 100%);
+  background: linear-gradient(90deg, var(--burgundy) 60%, var(--buttermilk) 80%, var(--mist-blue) 100%);
 }
 
 .p-end .quote-mark {
   font-family: 'Fraunces', serif;
   font-style: italic;
   font-size: 200px;
-  color: var(--blue);
+  color: var(--burgundy);
   opacity: 0.15;
   line-height: 0.6;
   margin-bottom: -20px;
@@ -323,9 +331,9 @@ body {
 }
 
 .p-end .quote .highlight {
-  color: var(--blue);
+  color: var(--burgundy);
   text-decoration: underline;
-  text-decoration-color: var(--yellow);
+  text-decoration-color: var(--buttermilk);
   text-underline-offset: 8px;
   text-decoration-thickness: 4px;
 }
@@ -335,7 +343,7 @@ body {
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--yellow);
+  border: 3px solid var(--buttermilk);
   margin-bottom: 20px;
 }
 
@@ -348,7 +356,7 @@ body {
 
 .p-end .cta {
   font-size: 32px;
-  color: var(--blue);
+  color: var(--burgundy);
   font-weight: 600;
   margin-bottom: 48px;
 }
@@ -377,10 +385,10 @@ body {
   <h1><!-- 主标题，72-96px --><span class="highlight"><!-- 高亮关键词 --></span></h1>
   <p class="subtitle"><!-- 副标题/一句话说明 --></p>
   <div class="author-row">
-    <img class="avatar" src="avatar.jpg" alt="avatar">
+    <img class="avatar" src="avatar.png" onerror="this.onerror=null;this.src='avatar-placeholder.svg'" alt="栗栗安头像">
     <div>
-      <div class="author-name"><!-- 你的名字 --></div>
-      <div class="author-desc"><!-- 你的一句话介绍 --></div>
+      <div class="author-name">栗栗安</div>
+      <div class="author-desc">AI 自媒体 × 女性成长</div>
     </div>
   </div>
 </div>
@@ -422,10 +430,10 @@ body {
   <div class="deco-bottom"></div>
   <div class="quote-mark">"</div>
   <p class="quote"><!-- 金句/核心观点 --><span class="highlight"><!-- 高亮关键词 --></span></p>
-  <img class="avatar" src="avatar.jpg" alt="avatar">
-  <p class="author-name"><!-- 你的名字 --></p>
-  <p class="cta"><!-- 关注 + 你的名字，或你的固定CTA短语 --></p>
-  <p class="tagline"><!-- 签名档第一行 --><br><!-- 签名档第二行 --></p>
+  <img class="avatar" src="avatar.png" onerror="this.onerror=null;this.src='avatar-placeholder.svg'" alt="栗栗安头像">
+  <p class="author-name">栗栗安</p>
+  <p class="cta">关注栗栗安，一起把 AI 学成生活的底气</p>
+  <p class="tagline">AI 自媒体 × 女性成长<br>温暖地学习，清醒地成长</p>
 </div>
 
 </div><!-- cards-container -->

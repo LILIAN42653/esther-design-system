@@ -33,7 +33,7 @@ Tab栏 / 侧边栏导航
   top: 0;
   z-index: 100;
   height: 56px;
-  background: var(--cream, #fefcf6);
+  background: var(--buttermilk, #FFF1B5);
   border-bottom: 1px solid rgba(26,26,26,.06);
   display: flex;
   align-items: center;
@@ -80,17 +80,29 @@ App型页面色彩更简洁：
 
 | 元素 | 色值 | 说明 |
 |------|------|------|
-| 背景 | `#fefcf6` | 保持品牌暖底 |
-| 卡片 | `#fff` | 白卡片浮于背景上 |
-| Header/Badge | `var(--blue)` | 品牌蓝做主交互色 |
-| 强调/边框 | `var(--yellow)` | 黄色做border/badge |
-| 危险操作 | `var(--red)` | 红色仅用于删除/警告 |
-| 绿色板块 | `#2d6a4f` | 特殊功能板块（如梦境/自然） |
+| 页面背景 | `#FFF1B5` | 酪乳黄承担大面积暖底 |
+| 卡片 | `#FFFEFA` | 暖白仅用于卡片内部阅读面 |
+| Header/Badge | `var(--burgundy)` | 旧勃艮第棕做主交互色 |
+| 强调/边框 | `var(--buttermilk)` | 酪乳黄做 border/badge |
+| 辅助信息 | `var(--mist-blue)` | 柔雾蓝只用于浅底和连接关系 |
+| 危险操作 | `#43302E` | 使用旧勃艮第棕文字、描边和确认提示，不新增警告色 |
 
-### 分类标签扩展色
-功能页面分类标签可使用扩展色，但总色板不超6种：
-- 所有扩展色饱和度应低于主三色
-- 白色卡片底 + 品牌色header是App页面标准配色
+统计卡数字统一使用旧勃艮第棕 `#43302E`。不要按卡片逐个改成金黄、灰蓝或近黑；需要区分时改用标签底色、图标或进度条，而不是改变核心数字颜色。
+
+### 分类标签颜色
+功能页面分类标签只使用三主色；通过深浅面积、边框和图标区分类别。第四辅助色 `#FFF8DE` 仅用于悬停、轻提示和局部承托，不作为新的分类色。暖白卡片底 + 品牌色 Header 是 App 页面标准配色，暖白不得铺满页面。
+
+### 时间线状态颜色
+时间线圆点按事件语义固定分配，禁止随机穿插：
+
+| 状态 | 类名 | 颜色 |
+|------|------|------|
+| 完成或重要记录 | `.completed` | 旧勃艮第棕 `#43302E` |
+| 进度或状态更新 | `.progress` | 酪乳黄 `#FFF1B5` |
+| 新增任务或提醒 | `.new` | 柔雾蓝 `#C1DBE8` |
+| 普通系统动态 | `.system` | 奶油米黄 `#FFF8DE` |
+
+不要继续使用仅描述颜色的 `.yellow`、`.red` 类名；状态变化时改语义类，不按视觉节奏随意换色。
 
 ---
 
@@ -102,7 +114,7 @@ App型页面色彩更简洁：
   display: flex;
   gap: 4px;
   overflow-x: auto;
-  border-bottom: 2px solid #eee;
+  border-bottom: 2px solid #E8DCCB;
 }
 .tab {
   padding: 10px 20px;
@@ -115,8 +127,8 @@ App型页面色彩更简洁：
   transition: all .2s;
 }
 .tab.active {
-  border-bottom-color: var(--blue);
-  color: var(--blue);
+  border-bottom-color: var(--burgundy);
+  color: var(--burgundy);
   font-weight: 600;
 }
 ```
@@ -134,7 +146,7 @@ App型页面色彩更简洁：
   justify-content: center;
 }
 .modal-content {
-  background: var(--cream, #fefcf6);
+  background: var(--cream, #FFFEFA);
   border-radius: 16px;
   padding: clamp(24px, 3vw, 40px);
   max-width: 560px;
@@ -147,7 +159,7 @@ App型页面色彩更简洁：
 ### 卡片Hover
 ```css
 .app-card {
-  background: #fff;
+  background: #FFFEFA;
   border-radius: 12px;
   padding: 1.25rem;
   box-shadow: 0 2px 12px rgba(0,0,0,.04);
@@ -168,12 +180,12 @@ App型页面色彩更简洁：
   padding: 10px 14px;
   font-size: 0.9rem;
   transition: border-color .2s;
-  background: #fff;
+  background: #FFFEFA;
 }
 .app-input:focus {
   outline: none;
-  border-color: var(--blue, #2B7FD8);
-  box-shadow: 0 0 0 3px rgba(43,127,216,0.1);
+  border-color: var(--burgundy, #43302E);
+  box-shadow: 0 0 0 3px rgba(67,48,46,0.1);
 }
 ```
 
@@ -214,7 +226,7 @@ App型页面色彩更简洁：
 ### Canvas卡片（手绘感）
 ```css
 .canvas-card {
-  background: #fff;
+  background: #FFFEFA;
   border: 2px dashed rgba(74,124,201,0.35);
   border-radius: 16px;
   padding: 1.25rem;

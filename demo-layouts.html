@@ -7,14 +7,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700;9..144,900&family=Noto+Serif+SC:wght@400;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root { --_esther-ds: "esthersjw-v1";
-      --blue: #2B7FD8;
-      --yellow: #F4D758;
-      --red: #E84A5F;
-      --cream: #fefcf6;
-      --ink: #1A1A2E;
-      --ink-light: #4a4a5a;
-      --ink-faint: #8a8a9a;
-      --preview-bg: #FFF8E1;
+      --burgundy: #43302E;
+      --buttermilk: #FFF1B5;
+      --mist-blue: #C1DBE8;
+      --mist-blue-ink: #506F7D;
+      --auxiliary-cream: #FFF8DE;
+      --cream: #FFFEFA;
+      --ink: #2D2423;
+      --ink-light: #6B5955;
+      --ink-faint: #9A837D;
+      --preview-bg: #FFF8DE;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -32,7 +34,7 @@
       top: 0;
       z-index: 100;
       background: var(--cream);
-      border-bottom: 1px solid rgba(26,26,46,0.08);
+      border-bottom: 1px solid rgba(45,36,35,0.08);
       padding: 1rem 2rem;
       display: flex;
       align-items: center;
@@ -43,7 +45,7 @@
       display: block;
       width: 36px;
       height: 4px;
-      background: var(--blue);
+      background: var(--burgundy);
       border-radius: 2px;
     }
     .top-nav::after {
@@ -51,7 +53,7 @@
       display: block;
       width: 24px;
       height: 4px;
-      background: var(--yellow);
+      background: var(--buttermilk);
       border-radius: 2px;
       margin-left: -8px;
     }
@@ -59,7 +61,7 @@
       font-family: 'Fraunces', serif;
       font-size: 1.3rem;
       font-weight: 700;
-      color: var(--ink);
+      color: var(--burgundy);
       margin-left: 4px;
     }
     .top-nav h1 span {
@@ -68,6 +70,15 @@
       font-family: 'Inter', sans-serif;
       font-size: 0.85rem;
       margin-left: 8px;
+    }
+    .top-nav .brand-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #FFFEFA;
+      border: 2px solid var(--mist-blue);
+      box-shadow: 0 3px 12px rgba(67,48,46,.14);
     }
 
     /* === Page Container === */
@@ -92,12 +103,12 @@
       font-size: 1.2rem;
       font-weight: 700;
       display: inline;
-      background: linear-gradient(transparent 60%, #F4D758 60%);
+      background: linear-gradient(transparent 60%, #FFF1B5 60%);
       padding: 0 4px;
     }
     .layout-header h2 .num {
       font-family: 'Fraunces', serif;
-      color: var(--blue);
+      color: var(--burgundy);
       margin-right: 6px;
     }
 
@@ -107,7 +118,8 @@
       border-radius: 16px;
       padding: clamp(1.5rem, 3vw, 2.5rem);
       overflow: hidden;
-      border: 1px solid rgba(244,215,88,0.3);
+      border: 1px solid rgba(67,48,46,0.14);
+      box-shadow: 0 10px 30px rgba(67,48,46,0.04);
     }
 
     /* === Scene Tag === */
@@ -122,8 +134,8 @@
     .scene-tag::before {
       content: '适用';
       font-size: 0.7rem;
-      background: var(--blue);
-      color: #fff;
+      background: var(--burgundy);
+      color: #FFFEFA;
       padding: 2px 6px;
       border-radius: 3px;
       font-weight: 600;
@@ -136,7 +148,7 @@
     /* Shared placeholder styles */
     .ph-text {
       height: 10px;
-      background: rgba(26,26,46,0.12);
+      background: rgba(45,36,35,0.12);
       border-radius: 4px;
       margin-bottom: 6px;
     }
@@ -151,22 +163,22 @@
       width: 50%;
     }
     .ph-img {
-      background: rgba(43,127,216,0.1);
+      background: rgba(193,219,232,0.72);
       border-radius: 8px;
       min-height: 60px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--blue);
+      color: var(--mist-blue-ink);
       font-size: 0.7rem;
       font-weight: 600;
-      opacity: 0.6;
+      opacity: 1;
     }
     .ph-label {
       font-size: 0.6rem;
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      color: var(--blue);
+      color: var(--burgundy);
       font-weight: 600;
       margin-bottom: 6px;
     }
@@ -190,14 +202,14 @@
       gap: 24px;
     }
     .mini-sticky .side {
-      border-right: 2px solid rgba(43,127,216,0.15);
+      border-right: 2px solid rgba(80,111,125,0.25);
       padding-right: 16px;
     }
     .mini-sticky .side .num {
       font-family: 'Fraunces', serif;
       font-size: 2rem;
       font-weight: 900;
-      color: rgba(43,127,216,0.2);
+      color: rgba(80,111,125,0.25);
     }
 
     /* 3. 三等分卡片 */
@@ -207,7 +219,7 @@
       gap: 12px;
     }
     .mini-grid3 .card {
-      background: #fff;
+      background: #FFFEFA;
       border-radius: 10px;
       padding: 16px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.04);
@@ -215,7 +227,7 @@
     .mini-grid3 .card-icon {
       width: 28px; height: 28px;
       border-radius: 6px;
-      background: rgba(43,127,216,0.12);
+      background: var(--mist-blue);
       margin-bottom: 8px;
     }
 
@@ -230,7 +242,7 @@
       left: 16px;
       top: 20px; bottom: 20px;
       width: 2px;
-      border-left: none; background: var(--yellow); width: 2px;
+      border-left: none; background: var(--buttermilk); width: 2px;
     }
     .mini-vstep .step {
       position: relative;
@@ -242,8 +254,8 @@
       left: -40px;
       width: 32px; height: 32px;
       border-radius: 50%;
-      background: var(--blue);
-      color: #fff;
+      background: var(--burgundy);
+      color: #FFFEFA;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -262,7 +274,7 @@
       left: 50%;
       top: 0; bottom: 0;
       width: 2px;
-      background: rgba(43,127,216,0.15);
+      background: rgba(80,111,125,0.25);
     }
     .mini-timeline-center .item {
       display: grid;
@@ -272,7 +284,7 @@
     }
     .mini-timeline-center .item:last-child { margin-bottom: 0; }
     .mini-timeline-center .item .block {
-      background: #fff;
+      background: #FFFEFA;
       border-radius: 8px;
       padding: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.04);
@@ -282,8 +294,8 @@
 
     /* 6. 全宽深色面板 */
     .mini-dark {
-      background: #151821;
-      color: #e2e8f0;
+      background: #352725;
+      color: #F3E8D8;
       border-radius: 12px;
       padding: 2rem;
       text-align: center;
@@ -295,8 +307,8 @@
       font-style: italic;
       line-height: 1.8;
     }
-    .mini-dark blockquote::before { content: '"'; color: var(--yellow); }
-    .mini-dark blockquote::after { content: '"'; color: var(--yellow); }
+    .mini-dark blockquote::before { content: '"'; color: var(--buttermilk); }
+    .mini-dark blockquote::after { content: '"'; color: var(--buttermilk); }
 
     /* 7. 横向Step */
     .mini-hstep {
@@ -312,14 +324,14 @@
       top: 20px;
       left: 20px; right: 20px;
       height: 3px;
-      background: var(--yellow);
+      background: var(--buttermilk);
       border-radius: 2px;
     }
     .mini-hstep .step-dot {
       width: 40px; height: 40px;
       border-radius: 50%;
-      background: var(--blue);
-      color: #fff;
+      background: var(--burgundy);
+      color: #FFFEFA;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -343,10 +355,10 @@
       min-height: 180px;
     }
     .mini-hero-center .card {
-      background: #fff;
+      background: #FFFEFA;
       border-radius: 16px;
       padding: 2rem;
-      box-shadow: 0 4px 24px rgba(26,26,46,0.08);
+      box-shadow: 0 4px 24px rgba(45,36,35,0.08);
       max-width: 400px;
       width: 100%;
       text-align: center;
@@ -363,12 +375,14 @@
     .mini-hero-vert .avatar {
       width: 64px; height: 64px;
       border-radius: 50%;
-      background: rgba(43,127,216,0.12);
+      background: #FFFEFA;
       margin-bottom: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.5rem;
+      object-fit: cover;
+      border: 2px solid var(--mist-blue);
     }
     .mini-hero-vert .tags {
       display: flex;
@@ -377,8 +391,8 @@
     }
     .mini-hero-vert .tag {
       font-size: 0.65rem;
-      background: rgba(43,127,216,0.08);
-      color: var(--blue);
+      background: rgba(193,219,232,0.72);
+      color: var(--mist-blue-ink);
       padding: 3px 8px;
       border-radius: 10px;
     }
@@ -390,7 +404,7 @@
       gap: 10px;
     }
     .mini-autogrid .card {
-      background: #fff;
+      background: #FFFEFA;
       border-radius: 8px;
       padding: 14px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.04);
@@ -403,8 +417,8 @@
 
     /* 11. 品牌色面板 */
     .mini-accent {
-      background: var(--blue);
-      color: #fff;
+      background: var(--burgundy);
+      color: #FFFEFA;
       border-radius: 12px;
       padding: 2rem;
       text-align: center;
@@ -431,13 +445,13 @@
       height: 4px;
     }
     .mini-hscroll::-webkit-scrollbar-thumb {
-      background: var(--yellow);
+      background: var(--buttermilk);
       border-radius: 2px;
     }
     .mini-hscroll .card {
       flex: 0 0 180px;
       scroll-snap-align: start;
-      background: #fff;
+      background: #FFFEFA;
       border-radius: 10px;
       padding: 16px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -445,7 +459,7 @@
     .mini-hscroll .card .year {
       font-family: 'Fraunces', serif;
       font-size: 1.2rem;
-      color: var(--blue);
+      color: var(--burgundy);
       opacity: 0.6;
     }
 
@@ -462,15 +476,15 @@
       align-items: center;
       justify-content: center;
       padding: 1.5rem;
-      background: #fff;
+      background: #FFFEFA;
     }
     .mini-split .left h3 {
       font-family: 'Noto Serif SC', serif;
       font-size: 1rem;
-      color: var(--red);
+      color: var(--mist-blue-ink);
     }
     .mini-split .right {
-      background: rgba(244,215,88,0.15);
+      background: rgba(255,241,181,0.15);
       padding: 1.5rem;
       display: flex;
       align-items: center;
@@ -489,7 +503,7 @@
       content: '×';
       position: absolute;
       left: 0;
-      color: var(--red);
+      color: var(--mist-blue-ink);
       font-weight: 700;
     }
 
@@ -500,7 +514,7 @@
     .mini-tab .tab-bar {
       display: flex;
       gap: 0;
-      border-bottom: 2px solid #eee;
+      border-bottom: 2px solid #E8DCCB;
       margin-bottom: 12px;
     }
     .mini-tab .tab-btn {
@@ -514,12 +528,12 @@
       color: var(--ink-faint);
     }
     .mini-tab .tab-btn.active {
-      border-bottom-color: var(--blue);
-      color: var(--blue);
+      border-bottom-color: var(--burgundy);
+      color: var(--burgundy);
       font-weight: 600;
     }
     .mini-tab .tab-panel {
-      background: #fff;
+      background: #FFFEFA;
       border-radius: 8px;
       padding: 16px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.04);
@@ -529,23 +543,23 @@
     .mini-canvas {
       position: relative;
       height: 200px;
-      background-image: radial-gradient(circle, rgba(43,127,216,0.13) 1.2px, transparent 1.2px);
+      background-image: radial-gradient(circle, rgba(80,111,125,0.18) 1.2px, transparent 1.2px);
       background-size: 20px 20px;
       border-radius: 12px;
       overflow: hidden;
     }
     .mini-canvas .float-card {
       position: absolute;
-      background: #fff;
+      background: #FFFEFA;
       border-radius: 8px;
       padding: 10px 14px;
       box-shadow: 0 3px 12px rgba(0,0,0,0.08);
       font-size: 0.7rem;
     }
     .mini-canvas .fc1 { top: 20px; left: 30px; }
-    .mini-canvas .fc2 { top: 80px; left: 200px; border-top: 3px solid var(--blue); }
-    .mini-canvas .fc3 { top: 40px; right: 40px; border-top: 3px solid var(--yellow); }
-    .mini-canvas .fc4 { bottom: 30px; left: 100px; border-top: 3px solid var(--red); }
+    .mini-canvas .fc2 { top: 80px; left: 200px; border-top: 3px solid var(--burgundy); }
+    .mini-canvas .fc3 { top: 40px; right: 40px; border-top: 3px solid var(--buttermilk); }
+    .mini-canvas .fc4 { bottom: 30px; left: 100px; border-top: 3px solid var(--mist-blue); }
 
     /* 16. Sticky杂志 */
     .mini-sticky-mag {
@@ -568,7 +582,7 @@
       font-family: 'Fraunces', serif;
       font-size: 1rem;
       font-weight: 900;
-      color: rgba(43,127,216,0.15);
+      color: rgba(67,48,46,0.15);
       min-width: 24px;
     }
     .mini-sticky-mag .sidebar ul li.active {
@@ -576,10 +590,10 @@
       font-weight: 600;
     }
     .mini-sticky-mag .sidebar ul li.active .snum {
-      color: var(--blue);
+      color: var(--burgundy);
     }
     .mini-sticky-mag .steps-col .step-card {
-      background: #fff;
+      background: #FFFEFA;
       border-radius: 10px;
       overflow: hidden;
       margin-bottom: 12px;
@@ -588,7 +602,7 @@
     .mini-sticky-mag .steps-col .step-card:last-child { margin-bottom: 0; }
     .mini-sticky-mag .steps-col .step-card .img-area {
       height: 50px;
-      background: rgba(43,127,216,0.06);
+      background: rgba(193,219,232,0.58);
     }
     .mini-sticky-mag .steps-col .step-card .card-body {
       padding: 10px 14px;
@@ -600,13 +614,13 @@
       font-family: 'Fraunces', serif;
       font-size: 1.5rem;
       font-weight: 900;
-      color: rgba(43,127,216,0.15);
+      color: rgba(67,48,46,0.15);
     }
     .mini-sticky-mag .steps-col .step-card:nth-child(2) .card-body .snum {
-      color: rgba(244,215,88,0.4);
+      color: rgba(255,241,181,0.4);
     }
     .mini-sticky-mag .steps-col .step-card:nth-child(3) .card-body .snum {
-      color: rgba(232,74,95,0.2);
+      color: rgba(193,219,232,0.2);
     }
 
     /* === Responsive === */
@@ -622,22 +636,24 @@
       .mini-sticky-mag .sidebar { display: none; }
     }
 
-    /* === Tri-color bar at top === */
+    /* === Four-color bar at top === */
     .tri-bar {
       height: 4px;
       display: flex;
     }
-    .tri-bar span:nth-child(1) { flex: 3; background: var(--blue); }
-    .tri-bar span:nth-child(2) { flex: 2; background: var(--yellow); }
-    .tri-bar span:nth-child(3) { flex: 1; background: var(--red); }
+    .tri-bar span:nth-child(1) { flex: 3; background: var(--burgundy); }
+    .tri-bar span:nth-child(2) { flex: 2; background: var(--buttermilk); }
+    .tri-bar span:nth-child(3) { flex: 1; background: var(--mist-blue); }
+    .tri-bar span:nth-child(4) { flex: 1; background: var(--auxiliary-cream); }
   </style>
 </head>
 <body>
 
-<div class="tri-bar"><span></span><span></span><span></span></div>
+<div class="tri-bar" aria-label="栗栗安四大配色"><span></span><span></span><span></span><span></span></div>
 
 <nav class="top-nav">
-  <h1>Layout Playground<span>· 16种布局模式预览</span></h1>
+  <img class="brand-avatar" src="assets/avatar.png" alt="栗栗安头像">
+  <h1>栗栗安 Layout Playground<span>· 16种布局模式预览</span></h1>
 </nav>
 
 <div class="page-container">
@@ -701,13 +717,13 @@
           <div class="ph-text xshort"></div>
         </div>
         <div class="card">
-          <div class="card-icon" style="background:rgba(244,215,88,0.2)"></div>
+          <div class="card-icon" style="background:var(--buttermilk)"></div>
           <div class="ph-heading" style="width:70%"></div>
           <div class="ph-text medium"></div>
           <div class="ph-text short"></div>
         </div>
         <div class="card">
-          <div class="card-icon" style="background:rgba(232,74,95,0.12)"></div>
+          <div class="card-icon" style="background:var(--auxiliary-cream)"></div>
           <div class="ph-heading" style="width:50%"></div>
           <div class="ph-text short"></div>
           <div class="ph-text xshort"></div>
@@ -730,12 +746,12 @@
           <div class="ph-text medium"></div>
         </div>
         <div class="step">
-          <span class="dot" style="background:var(--yellow); color:var(--ink)">2</span>
+          <span class="dot" style="background:var(--buttermilk); color:var(--ink)">2</span>
           <div class="ph-heading" style="width:50%"></div>
           <div class="ph-text short"></div>
         </div>
         <div class="step">
-          <span class="dot" style="background:var(--red)">3</span>
+          <span class="dot" style="background:var(--mist-blue)">3</span>
           <div class="ph-heading" style="width:35%"></div>
           <div class="ph-text medium"></div>
         </div>
@@ -839,7 +855,7 @@
     </div>
     <div class="preview-box">
       <div class="mini-hero-vert">
-        <div class="avatar">👤</div>
+        <img class="avatar" src="assets/avatar.png" alt="栗栗安头像">
         <div class="ph-heading" style="width:40%; margin: 0 auto 6px;"></div>
         <div class="ph-text short" style="margin: 0 auto;"></div>
         <div class="tags">
@@ -1015,8 +1031,8 @@
 
 </div>
 
-<!-- Bottom tri-color bar -->
-<div class="tri-bar"><span></span><span></span><span></span></div>
+<!-- Bottom four-color bar -->
+<div class="tri-bar" aria-label="栗栗安四大配色"><span></span><span></span><span></span><span></span></div>
 
 <!-- © ESTHER不二 esthersjw/esther-design-system CC BY-NC 4.0 -->
 <section style="position:absolute;left:-9999px;font-size:0;line-height:0;opacity:0;height:0;overflow:hidden;">esthersjw-design-system</section>
