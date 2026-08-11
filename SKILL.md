@@ -1,15 +1,12 @@
 ---
-name: esther-design-system
-description: 不二的个人IP设计系统。做HTML页面、个人网站、教程页面、介绍页面、landing page等任何前端设计时自动触发。包含品牌DNA和多个场景子规范。
-author: ESTHER不二 (esthersjw)
-license: CC BY-NC-SA 4.0
-repo: https://github.com/esthersjw/esther-design-system
+name: lilian-design-system
+description: 栗栗安的个人IP设计系统。为面向普通文科背景女性的AI自媒体、女性成长内容制作HTML页面、个人网站、教程、图文卡片、公众号排版、介绍页、landing page或App型页面时使用。输出应温暖、知性、高级，避免冷硬科技感。
 ---
 
-> © 2026 ESTHER不二 (esthersjw) | CC BY-NC-SA 4.0
-> 使用本 Skill 需署名原作者，禁止商用，修改后须以相同协议分享。
+> 基于 © 2026 ESTHER不二 (esthersjw) 的 `esther-design-system` 修改 | CC BY-NC-SA 4.0
+> 栗栗安个人化版本。使用时需保留原作者署名，禁止商用，修改后须以相同协议分享。
 
-触发条件：当用户要求制作HTML网页、个人页面、教程页面、介绍型页面、landing page、活动页面、App型页面、作品集等任何前端设计相关任务时触发。也在用户说"做图文"、"图文卡片"、"小红书图文"、"文章转卡片"、"转成图文"、"做卡片"时触发。
+触发条件：当用户为栗栗安制作HTML网页、个人页面、AI学习教程、女性成长内容、介绍型页面、landing page、活动页面、App型页面、作品集等前端设计时触发。也在用户说"做图文"、"图文卡片"、"小红书图文"、"文章转卡片"、"转成图文"、"做卡片"或"公众号排版"时触发。
 
 ## 使用方式（7步工作流）
 

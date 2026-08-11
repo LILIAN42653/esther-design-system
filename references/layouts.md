@@ -127,7 +127,7 @@
   left: 22px;
   top: 40px; bottom: 40px;
   width: 2px;
-  border-left: 2px dashed var(--yellow);
+  border-left: 2px dashed var(--buttermilk);
 }
 .step-item {
   position: relative;
@@ -137,8 +137,8 @@
   left: -60px;
   width: 44px; height: 44px;
   border-radius: 50%;
-  background: var(--blue);
-  color: #fff;
+  background: var(--burgundy);
+  color: #FFFEFA;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -210,8 +210,8 @@
 
 ```css
 .dark-section {
-  background: #151821;
-  color: #e2e8f0;
+  background: #352725;
+  color: #F3E8D8;
   padding: clamp(60px, 8vh, 120px) 0;
 }
 .dark-section .container {
@@ -262,7 +262,7 @@
   top: 28px;
   left: 28px; right: 28px;
   height: 3px;
-  background: linear-gradient(90deg, var(--yellow), var(--blue));
+  background: linear-gradient(90deg, var(--buttermilk), var(--burgundy));
 }
 .step-card {
   text-align: center;
@@ -271,8 +271,8 @@
 .step-dot {
   width: 56px; height: 56px;
   border-radius: 50%;
-  background: var(--blue);
-  color: #fff;
+  background: var(--burgundy);
+  color: #FFFEFA;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -309,7 +309,7 @@
   padding: 6rem 2rem 4rem;
 }
 .hero-card {
-  background: #fff;
+  background: #FFFEFA;
   border-radius: 24px;
   padding: clamp(2.5rem, 5vw, 4.5rem);
   box-shadow: 0 4px 32px rgba(26,26,26,.08);
@@ -399,8 +399,8 @@
 
 ```css
 .section-accent {
-  background: var(--blue);
-  color: #fff;
+  background: var(--burgundy);
+  color: #FFFEFA;
   padding: clamp(80px, 12vh, 160px) 0;
   position: relative;
   overflow: hidden;
@@ -412,7 +412,7 @@
 }
 ```
 
-⚠️ 注意：一页最多1~2个。可换用黄色（文字改为墨色）。不要在品牌色面板上放蓝色文字。
+⚠️ 注意：一页最多1~2个。可换用酪乳黄（文字改为墨色）。不要在品牌色面板上放旧勃艮第棕文字。
 
 ---
 
@@ -448,7 +448,7 @@
 .timeline-card {
   flex: 0 0 300px;
   scroll-snap-align: start;
-  background: #fff;
+  background: #FFFEFA;
   border-radius: 16px;
   padding: clamp(24px, 3vw, 36px);
   box-shadow: 0 4px 20px rgba(0,0,0,.06);
@@ -456,7 +456,7 @@
 .timeline-card .year {
   font-family: 'Fraunces', serif;
   font-size: 1.8rem;
-  color: var(--blue);
+  color: var(--burgundy);
   opacity: 0.6;
 }
 ```
@@ -535,7 +535,7 @@
   display: flex;
   gap: 4px;
   overflow-x: auto;
-  border-bottom: 2px solid #eee;
+  border-bottom: 2px solid #E8DCCB;
   margin-bottom: 2rem;
 }
 .tab {
@@ -548,8 +548,8 @@
   margin-bottom: -2px;
 }
 .tab.active {
-  border-bottom-color: var(--blue);
-  color: var(--blue);
+  border-bottom-color: var(--burgundy);
+  color: var(--burgundy);
   font-weight: 600;
 }
 .tab-content { display: none; }
@@ -657,7 +657,7 @@
   font-family: 'Fraunces', serif;
   font-size: 1.5rem;
   font-weight: 900;
-  color: rgba(43,127,216,0.12);
+  color: rgba(67,48,46,0.12);
   min-width: 36px;
   transition: all 0.3s ease;
 }
@@ -666,7 +666,7 @@
   font-weight: 700;
 }
 .layout-sticky-mag .nav li.active::before {
-  color: var(--blue);
+  color: var(--burgundy);
   font-size: 1.8rem;
 }
 .steps-content {
@@ -696,10 +696,10 @@
   font-size: 3rem;
   font-weight: 900;
   line-height: 1;
-  color: rgba(43,127,216,0.15);
+  color: rgba(67,48,46,0.15);
 }
-.step-item:nth-child(3n+2) .step-num { color: rgba(244,215,88,0.35); }
-.step-item:nth-child(3n) .step-num { color: rgba(232,74,95,0.2); }
+.step-item:nth-child(3n+2) .step-num { color: rgba(255,241,181,0.35); }
+.step-item:nth-child(3n) .step-num { color: rgba(193,219,232,0.2); }
 .step-item .step-info h4 {
   font-family: 'Noto Serif SC', serif;
   font-size: 1.3rem;
@@ -734,4 +734,4 @@ const stepObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.step-observe').forEach(el => stepObserver.observe(el));
 ```
 
-⚠️ 注意：步骤5~10个最合适。超过10个太长，少于5个用横向Step连接线（#7）更紧凑。大图是关键——每一步都必须有一张占满宽度的配图。编号三色轮换（蓝/黄/红）保持节奏。移动端侧栏隐藏，变成纯纵向滚动。
+⚠️ 注意：步骤5~10个最合适。超过10个太长，少于5个用横向Step连接线（#7）更紧凑。大图是关键——每一步都必须有一张占满宽度的配图。编号三色轮换（旧勃艮第棕/酪乳黄/柔雾蓝）保持节奏。移动端侧栏隐藏，变成纯纵向滚动。
